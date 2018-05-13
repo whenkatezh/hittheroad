@@ -68,6 +68,10 @@ body, html {
 .my-gallery figcaption {
   display: none;
 }
+
+.mySlides{
+  height: 280px;
+}
 </style>
 
 <!-- Core CSS file -->
@@ -125,19 +129,53 @@ body, html {
       We are a bunch of Travelers, Photographers and Mystery Seekers </p>
     <p> Our love for traveling not just stems from curiosity to explore new places but the journey en-route to various places that really gets us excited because We truly believe that the best stories, best souls and best memories are all out there on the streets just waiting to be picked up.
         The blog has travelogues, travel tips, travel videos and plenty of memories captured by our lens. So I leave it to you, explore the blog and decide by yourself actually who we are.</p>
-  <div class="w3-row">
+  <!-- <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>Majid Zz</b></p><br>
       <img src="kerala/self_back.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="300" height="200">
     </div>
-      <div class="w3-col m6 w3-center w3-padding-large">
-          <p><b><i class="fa fa-user w3-margin-right"></i>Majid Zz</b></p><br>
-          <img src="kerala/self_back.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="300" height="200">
-      </div>
-
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Majid Zz</b></p><br>
+        <img src="kerala/self_back.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="300" height="200">
+    </div>
   </div>
-</div>
+ --></div>
+<div class="w3-row w3-center w3-padding-16">
+    <div class="mySlides w3-card-4 w3-panel w3-light-grey">
+        <p class="w3-xlarge">
+          <i>"There is a thin line between being a tourist and being a traveler. I experienced it with this trip. Traveling with your buddies is a fine tuned process. But traveling with 11 strangers…Accepting, adjusting and making the whole trip lively is the best ever essence I cherish forever. The real freedom in being you. That's how I summarize my experience. I love clicking pics. That's how I came across ramu kaka on Instagram. And when you love the craft unconditionally it takes u to the best souls."</i>
+        </p>
+        <p>Goutham Mukka</p>
+    </div>
 
+    <div class="mySlides w3-card-4 w3-panel w3-light-grey">
+        <p class="w3-xlarge">
+          <i>"This getaway was a great opportunity to bond and to see how travelers are always on the move. It was an awesome experience right from the time v planned it to the times we made abrupt changes in schedules and still managed to get past it smoothly. All in all a hell of an experience and will always be one of the best trips of my life."</i>
+        </p>
+        <p>Rodan Dsouza</p>
+    </div>
+
+    <div class="mySlides w3-card-4 w3-panel w3-light-grey">
+        <p class="w3-xlarge">
+          <i>"The most fun loving trip I ever had. I didn’t feel at single point that i started this journey with bunch of unknown people. The trip was perfectly managed including food, stays and location points. Kaka and everyone else was so caring all the time and they made sure everyone around is comfortable enough."</i>
+        </p>
+        <p>Deepika Sharma</p>
+    </div>
+
+    <div class="mySlides w3-card-4 w3-panel w3-light-grey">
+        <p class="w3-xlarge">
+          <i>"I love travelling.  Being a businesswoman I travel to different cities. But this trip was amazing. It was my first trip with strangers. I was excited and curious but this was unexpectedly awesome. All amazing people. We fought, we teased, we sang, we shopped and we captured memories. I have gathered lot of stuff for my poetry and good pictures as memories. I am looking forward for such trips in future too to explore new places and people. Thanks ramu kaka and team."</i>
+        </p>
+        <p>Arpita Dharmadhikari</p>
+    </div>
+
+    <div class="mySlides w3-card-4 w3-panel w3-light-grey">
+        <p class="w3-xlarge">
+          <i>"Enjoyed each day of the trip, architecture of that place, night under the sky, fighting for the front seat, sharing thoughts of different people, trolls, strangers who became friends, company of people is the best part of the trip."</i>
+        </p>
+        <p>Teju</p>
+    </div>
+</div>
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">14+</span><br>
@@ -498,6 +536,22 @@ var theForm = document.getElementById( 'theForm' );
       classie.addClass( messageEl, 'show' );
     }
   } );
+</script>
+<script>
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1} 
+      x[slideIndex-1].style.display = "block"; 
+      setTimeout(carousel, 2000); 
+  }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDTD5UEpCOy0J5oA4PTd2DiXdutD3Zfis&callback=myMap"></script>
 </body>
